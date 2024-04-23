@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing</title>
+    <link rel="stylesheet" href="micro.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c44b6fa3b8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-div">
+
+        <header class="d-flex justify-content-between align-items-center px-3 py-1">
+            <h5 class="side-heading m-0 text-white"><span class="me-2 p-1">M</span>Microservices</h5>
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-question me-3 text-white" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Help!"></i>
+                <i class="fa-regular fa-bell me-3 text-white" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Notification"></i>
+                <span id="notification-badge"
+                    class="position-absolute top-10 start-1 translate-middle badge rounded-pill bg-danger">3
+                    <!-- Initial notification count -->
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+                <i class="fa-solid fa-gear me-3 text-white" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Setting"></i>
+                
+                <a data-bs-toggle="offcanvas" data-bs-target="#demo">
+                    <img src="img/keerthi.jpg" width="40px" height="40px" class="rounded-circle">
+                </a>
+            </div>
+        </header>
+
+        <!------------- Offcanvas --------------->
+
+        <div class="offcanvas offcanvas-end" id="demo">
+            <div class="offcanvas-header d-flex justify-content-center align-items-center">
+
+                <h1 class="offcanvas-title"><img src="img/keerthi.jpg" width="70px" height="70px"
+                        class="rounded-circle mt-5"></h1>
+
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                    style="position: absolute; top: 15px; right: 30px;"></button>
+
+            </div>
+            <div class="offcanvas-body">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="name1"><b>Keerthika M</b></div>
+                    <div class="mb-2">keerthika@senturaa.com</div>
+                    <div class="mb-2">User ID: 1234566789</div>
+                    <button class="btn btn-danger login" type="button">Logout</button>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <aside>
+                <ul class="navbar-nav">
+                    <!-- <a href="#" onclick="openNav('dashboardContent')" class="nav-link text-white">
+                        <li class="nav-item text-center"><i class="fa-solid fa-gauge-high "></i><br>Dashboard</li>
+                    </a> -->
+                    <a href="#" onclick="openNav('auditContent')" class="nav-link text-white">
+                        <li class="nav-item text-center"><i class="fa-regular fa-lightbulb"></i><br>Audit Log</li>
+                    </a>
+                    <a href="#" onclick="openNav('microContent')" class="nav-link text-white">
+                        <li class="nav-item text-center"><i class="fa-regular fa-lightbulb"></i><br>My Extension
+                        </li>
+                    </a>
+                    <a href="#" class="nav-link text-white">
+                        <li class="nav-item text-center"><i class="fa-regular fa-lightbulb"></i><br>All Extension
+                        </li>
+                    </a>
+                    
+                </ul>
+
+
+                <div id="button">
+                    <button onclick="toggleNav()"><i class="fa-solid fa-angles-left"></i></button>
+                </div>
+
+
+                <div id="mySidepanel" class="sidepanel">
+
+                    <div id="auditContent" class="content-section" >
+                        <p class="ps-3">Audit Log Content</p>
+                    </div>
+                    <div id="microContent" class="content-section" style="display: none;">
+                        <p class="ps-3">My Microservices Content</p>
+                        <p class="ps-3">Lorem, ipsum dolor.</p>
+                    </div>
+                    <div id="allContent" class="content-section" style="display: none;">
+                        <p>All Microservices Content</p>
+                    </div>
+                   
+                </div>
+            </aside>
+
+            <!-- Content -->
+            <article id="body-div">
+
+                <div class="container-fluid card-section">
+                    <div class="row mt-3">
+                        <div class="col card1">
+                            <div class="card-body">
+                                <h6>Product Solid</h6>
+                                <p>45678</p>
+                                <p>jan-march 2019</p>
+                            </div>
+                        </div>
+                        <div class="col card2 ms-3">
+                            <div class="card-body">
+                                <h6>Product Solid</h6>
+                                <p>45678</p>
+                                <p>jan-march 2019</p>
+                            </div>
+                        </div>
+                        <div class="col card3 ms-3">
+                            <div class="card-body">
+                                <h6>Product Solid</h6>
+                                <p>45678</p>
+                                <p>jan-march 2019</p>
+                            </div>
+                        </div>
+                        <div class="col card4 ms-3">
+                            <div class="card-body">
+                                <h6>Product Solid</h6>
+                                <p>45678</p>
+                                <p>jan-march 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container-fluid card-section " id="all_content">
+                    <div class="row mt-3">
+                        <div class="col">
+                            <div class="card-body1">
+                                <div class="card-header p-2">Loyverse for Zoho Books</div>
+                                <div class="card-body1 d-flex justify-content-end align-items-center"><button
+                                        class="btn btn-success text-white ">Active</button></div>
+                                <!-- <div class="card-footer">Footer</div> -->
+                            </div>
+                        </div>
+                        <div class="col ms-3">
+                            <div class="card-body1">
+                                <div class="card-header p-2">Loyverse for Zoho Books</div>
+                                <div class="card-body1 d-flex justify-content-end align-items-center"><button
+                                        class="btn btn-primary text-white ">Enable</button></div>
+                                <!-- <div class="card-footer">Footer</div> -->
+                            </div>
+                        </div>
+                        <div class="col ms-3 me-4">
+                            <div class="card-body1">
+                                <div class="card-header p-2">Loyverse for Zoho Books</div>
+                                <div class="card-body1 d-flex justify-content-end align-items-center"><button
+                                        type="button" class="btn btn-primary">Enable</button></div>
+                                <!-- <div class="card-footer">Footer</div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 70px;">
+                        <div class="col">
+                            <div class="card-body1">
+                                <div class="card-header p-2">Loyverse for Zoho Books</div>
+                                <div class="card-body1 d-flex justify-content-end align-items-center"><button
+                                        type="button" class="btn bg-primary text-white ">Enable</button></div>
+                                <!-- <div class="card-footer">Footer</div> -->
+                            </div>
+                        </div>
+                        <div class="col ms-3">
+                            <div class="card-body1">
+                                <div class="card-header p-2">Loyverse for Zoho Books</div>
+                                <div class="card-body1 d-flex justify-content-end align-items-center"><button
+                                        class="btn btn-primary text-white ">Enable</button></div>
+                                <!-- <div class="card-footer">Footer</div> -->
+                            </div>
+                        </div>
+                        <div class="col ms-3 me-4">
+                            <div class="card-body1">
+                                <div class="card-header p-2">Loyverse for Zoho Books</div>
+                                <div class="card-body1 d-flex justify-content-end align-items-center"><button
+                                        class="btn btn-primary text-white ">Enable</button></div>
+                                <!-- <div class="card-footer">Footer</div> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row" style="margin-top: 70px;">
+                        <div class="col">
+                            <div class="card-body1">
+                                <div class="card-header p-2">Loyverse for Zoho Books</div>
+                                <div class="card-body1 d-flex justify-content-end align-items-center"><button
+                                        class="btn btn-primary text-white ">Enable</button></div>
+                                <!-- <div class="card-footer">Footer</div> -->
+                            </div>
+                        </div>
+                        <div class="col ms-3">
+                            <div class="card-body1">
+                                <div class="card-header p-2">Loyverse for Zoho Books</div>
+                                <div class="card-body1 d-flex justify-content-end align-items-center"><button
+                                        class="btn btn-primary text-white ">Enable</button></div>
+                                <!-- <div class="card-footer">Footer</div> -->
+                            </div>
+                        </div>
+                        <div class="col ms-3 me-4">
+                            <div class="card-body1">
+                                <div class="card-header p-2">Loyverse for Zoho Books</div>
+                                <div class="card-body1 d-flex justify-content-end align-items-center"><button
+                                        class="btn btn-primary text-white ">Enable</button></div>
+                                <!-- <div class="card-footer">Footer</div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </article>
+        </main>
+
+        <!-- <footer>footer</footer> -->
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="micro.js"></script>
+</body>
+
+</html>

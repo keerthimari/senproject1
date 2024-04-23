@@ -1,0 +1,168 @@
+html,body{
+    margin: 0;
+    height: 100%;
+}
+.container-div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+header{
+    background-color: rgb(28,28,64);
+}
+span{
+    background-color: rgb(80,81,249);
+}
+.fa-bell {
+    position: relative;
+    font-size: 20px;
+}
+.fa-gear{
+    font-size: 20px;
+}
+.fa-question{
+    font-size: 20px;
+}
+#notification-badge {
+    position: absolute;
+    right: 90px;
+    font-size: 10px;
+}
+main{
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    /* background-color: teal; */
+}
+aside{
+    flex: 0 0 80px;
+    /* width: 75px; */
+    font-size: 15px;
+    /* background-color: rgb(18,19,43); */
+    background-color: #12132B;
+    /* z-index: 2; */
+}
+aside ul{
+    height: 95%;
+}
+aside ul li:hover{
+    /* background-color: rgb(22,36,53); */
+    background-color: rgb(44,42,80);
+}
+aside button{
+    display: flex;
+    align-items: end;
+    margin-left: 24px;
+}
+aside button .fa-angles-left{
+    /* background-color: rgb(24,26,46); */
+    border: none;
+    /* color: white; */
+}
+.sidepanel {
+    width: 0;
+    position: fixed;
+    z-index: -11;
+    height: 100%;
+    top: 48px;
+    left: 75px;
+    background-color: rgb(30,31,67);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+}
+.sidepanel p{
+    color: white;
+}
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    /* transition: 0.3s; */
+}
+
+.sidepanel a:hover {
+    color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* .content{
+    overflow: auto;
+   
+   
+    margin: 10px;
+    border-radius: 10px;
+    
+} */
+#body-div {
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    width: 95%;
+    /* border: 1px solid black; */
+
+}
+
+.card1 {
+    background: rgb(128, 82, 245);
+    background: linear-gradient(90deg, rgba(128, 82, 245, 1) 0%, rgba(119, 135, 251, 1) 100%);
+    border-radius: 10px;
+    color: white;
+    /* padding-left: 25px;
+    padding-right: 35px; */
+    padding-top: 15px;
+    margin-left: 10px;
+}
+
+.card2 {
+    background: rgb(241, 159, 157);
+    background: linear-gradient(90deg, rgba(241, 159, 157, 1) 0%, rgba(252, 96, 137, 1) 100%);
+    border-radius: 10px;
+    color: white;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+.card3 {
+    background: rgb(255, 133, 65);
+    background: linear-gradient(90deg, rgba(255, 133, 65, 1) 0%, rgba(254, 185, 118, 1) 100%);
+    border-radius: 10px;
+    color: white;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+.card4 {
+    background: rgb(86, 126, 251);
+    background: linear-gradient(90deg, rgba(86, 126, 251, 1) 0%, rgba(28, 85, 254, 1) 100%);
+    border-radius: 10px;
+    color: white;
+    margin-right: 5px;
+   padding: 15px 25px;
+   
+}
+
+/* All Extension */
+.card-body1 {
+    height: 170px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+
+}
+
+.card-body1 .card-header {
+    background-color: rgb(237, 237, 255);
+    font-weight: bold;
+}
