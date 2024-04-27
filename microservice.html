@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microservices</title>
     <link rel="stylesheet" href="micro.css">
+    <!-- Box icon cdn -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,10 +40,10 @@
                     <span class="visually-hidden">unread messages</span>
                 </span>
                 <i class="fa-solid fa-gear me-3 text-white" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                    title="Setting"></i>
+                    title="Settings"></i>
                 
                 <a data-bs-toggle="offcanvas" data-bs-target="#demo">
-                    <img src="img/keerthi.jpg" width="40px" height="40px" class="rounded-circle">
+                    <img src="img/veera sir pic.png" width="40px" height="40px" class="rounded-circle">
                 </a>
             </div>
         </header>
@@ -51,8 +53,8 @@
         <div class="offcanvas offcanvas-end" id="demo">
             <div class="offcanvas-header d-flex justify-content-center align-items-center">
 
-                <h1 class="offcanvas-title"><img src="img/keerthi.jpg" width="70px" height="70px"
-                        class="rounded-circle mt-5"></h1>
+                <h1 class="offcanvas-title"><img src="img/veera sir pic.png" width="70px" height="70px"
+                        class="rounded-circle mt-2"></h1>
 
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                     style="position: absolute; top: 15px; right: 30px;"></button>
@@ -60,12 +62,70 @@
             </div>
             <div class="offcanvas-body">
                 <div class="d-flex flex-column align-items-center">
-                    <div class="name1"><b>Keerthika M</b></div>
-                    <div class="mb-2">keerthika@senturaa.com</div>
-                    <div class="mb-2">User ID: 1234566789</div>
+                    <div class="name1"><b>Veera</b></div>
+                    <div class="mb-2">veera@senthuraa.com</div>
+                    <div class="mb-2">User ID: 60017510405</div>
+                    <div class="mb-2">Organization ID: 60026625314</div>
                     <button class="btn btn-danger login" type="button">Logout</button>
                 </div>
+                <hr>
+
+                <div class="offcanvas-content">
+                    <h5 class="ms-1">SUBSCRIPTION</h5>
+                    <h6 class="ms-1">Manage Subscription</h6>
+                </div>
+                <hr>
+
+                <div class="offcanvas-content1">
+                    <p><b>NEED HELP?</b></p>
+                    <ul class="navbar-nav">
+                        <li class="nav-item chat">
+                            <a class="nav-link" href="#">
+                                <i class="fa-regular fa-message"></i> Chat With Us
+                            </a>
+                        </li>
+                        <li class="nav-item talk">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-headphones"></i> Talk With Us
+                            </a>
+                        </li>
+                        <li class="nav-item write">
+                            <a class="nav-link" href="#">
+                                <i class="fa-regular fa-message"></i> Write With Us
+                            </a>
+                        </li>
+                        <li class="nav-item community">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-person"></i> Community
+                            </a>
+                        </li>
+                        <li class="nav-item resources">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-desktop"></i> Resources
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <div class="final">
+                    <p><b>NEWS ROOM?</b></p>
+                    <ul class="navbar-nav">
+                        <li class="nav-item chat">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-gift"></i> What's New
+                            </a>
+                        </li>
+                        <li class="nav-item talk">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-person"></i> Refer and Earn
+                            </a>
+                        </li>
+                </div>
+
             </div>
+
+           
         </div>
 
         <main>
@@ -74,15 +134,18 @@
                     <!-- <a href="#" onclick="openNav('dashboardContent')" class="nav-link text-white">
                         <li class="nav-item text-center"><i class="fa-solid fa-gauge-high "></i><br>Dashboard</li>
                     </a> -->
-                    <a href="#" onclick="openNav('auditContent')" class="nav-link text-white">
+                    <!-- <a href="#" onclick="openNav('auditContent')" class="nav-link text-white">
                         <li class="nav-item text-center"><i class="fa-regular fa-lightbulb"></i><br>Audit Log</li>
+                    </a> -->
+                    <a href="#"  class="nav-link text-white">
+                        <li class="nav-item text-center" id="audit_log"><i class="fa-regular fa-lightbulb"></i><br>Audit Log</li>
                     </a>
-                    <a href="#" onclick="openNav('microContent')" class="nav-link text-white">
+                    <!-- <a href="#" onclick="openNav('microContent')" class="nav-link text-white">
                         <li class="nav-item text-center"><i class="fa-regular fa-lightbulb"></i><br>My Extension
                         </li>
-                    </a>
+                    </a> -->
                     <a href="#" class="nav-link text-white">
-                        <li class="nav-item text-center" id="all_extension"><i class="fa-regular fa-lightbulb" ></i><br>All Extension
+                        <li class="nav-item text-center" id="all_extension"><i class="fa-regular fa-lightbulb" ></i><br>AppSync
                         </li>
                     </a>
                     
@@ -90,14 +153,24 @@
 
 
                 <div id="button">
-                    <button onclick="toggleNav()"><i class="fa-solid fa-angles-left"></i></button>
+                    <button onclick="toggleNav()"><i class="fa-solid fa-angles-left bg-primary"></i></button>
+                    
                 </div>
 
 
                 <div id="mySidepanel" class="sidepanel">
 
                     <div id="auditContent" class="content-section" >
-                        <p class="ps-3">Audit Log Content</p>
+                        <!-- <p class="ps-3">Audit Log Content</p> -->
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+                            <div id="myDropdown" class="dropdown-content">
+                              <a href="#home">Home</a>
+                              <a href="#about">About</a>
+                              <a href="#contact">Contact</a>
+                            </div>
+                          </div>
+
                     </div>
                     <div id="microContent" class="content-section" style="display: none;">
                         <p class="ps-3">My Microservices Content</p>
@@ -113,10 +186,528 @@
             <!-- Content -->
             <article id="body-div">
 
+                <!-- Audit Log -->
+                <div class="container-fluid mt-3 d-none" id="audit">
+                    <div class="content-1">
+                        <header class="main-header">
+                           <div class="logo">
+                              <p>All Purchase Indents <i class="fa-sharp fa-solid fa-caret-down" style="color: black;"></i></p>
+                           </div>
+               
+                           <ul class="main-ul">
+                              <li>
+                                 <a>
+                                    <!-- <button><i class="fa-solid fa-plus"></i> New</button> -->
+                                 </a>
+                              </li>
+                              <li>
+                                 <a>
+                                    <!-- <button class="search-icon"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button> -->
+
+                                    <button class="search-icon" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Export">
+                                       <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                                   </button>
+                                    
+                                 </a>
+                              </li>
+               
+                              <li>
+                                 <a>
+                                    <button><i class="fa-solid fa-ellipsis"></i></button>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a>
+                                    <button><i class="fa-solid fa-question"></i></button>
+                                 </a>
+                              </li>
+                           </ul>
+                        </header>
+               
+                        <div class="content-body">
+               
+                           <div
+                              style="overflow-y: auto;height: 91vh;min-height: 91vh;margin-left: 2px;overflow-x: auto;display:none;background-color: #FFFFFE;margin-top: 2px;"
+                              class="popup">
+                              <div class="search-popup">
+                                 <ul>
+                                    <li>
+                                       <a>
+                                          Search
+                                       </a>
+                                    </li>
+                                    <li>
+                                       <a>
+                                          <button class="close-search-icon"><i class="fa-sharp fa-solid fa-xmark"
+                                                style="color: black;font-size: 17px;"></i></button>
+                                       </a>
+                                    </li>
+                                 </ul>
+               
+                                 <div class="body-of-popup">
+                                    <div class="main">
+                                       <div class="main-one">
+                                          <input type="checkbox" class="checkbox" checked> &nbsp;
+                                          <p>Upload Bills</p>
+                                       </div>
+                                    </div>
+                                    <div class="input-1">
+                                       <div class="select">
+                                          <select>
+                                             <option value="Is Not">Is Not</option>
+                                             <option value="txt">Is Empty</option>
+                                             <option value="epub">Empty</option>
+                                             <option value="fb2">Starts With</option>
+                                             <option value="mobi">Starts End</option>
+                                          </select>
+                                       </div>
+                                       <input type="text" id="empty-input" onclick="inputBorder()">
+                                    </div> <!-- input-1 -->
+               
+                                    <div class="main">
+                                       <div class="main-one">
+                                          <input type="checkbox" class="checkbox" checked> &nbsp;
+                                          <p>Remarks</p>
+                                       </div>
+                                    </div>
+                                    <div class="input-2">
+                                       <div class="select">
+                                          <select>
+                                             <option value="Is Not">Is Not</option>
+                                             <option value="txt">Is Empty</option>
+                                             <option value="epub">Empty</option>
+                                             <option value="fb2">Starts With</option>
+                                             <option value="mobi">Starts End</option>
+                                          </select>
+                                       </div>
+                                       <input type="text" id="empty-input">
+                                    </div> <!-- input-2 -->
+               
+                                    <div class="main">
+                                       <div class="main-one">
+                                          <input type="checkbox" class="checkbox" checked> &nbsp;
+                                          <p>Mode of Payment</p>
+                                       </div>
+                                    </div>
+                                    <div class="input-3">
+                                       <div class="select">
+                                          <select>
+                                             <option value="Is Not">Is Not</option>
+                                             <option value="txt">Is Empty</option>
+                                             <option value="epub">Empty</option>
+                                             <option value="fb2">Starts With</option>
+                                             <option value="mobi">Starts End</option>
+                                          </select>
+                                       </div>
+                                       <input type="text" id="empty-input">
+                                    </div> <!-- input-3 -->
+               
+                                    <div class="main">
+                                       <div class="main-one">
+                                          <input type="checkbox" class="checkbox" checked> &nbsp;
+                                          <p>Added Time</p>
+                                       </div>
+                                    </div>
+                                    <div class="input-4">
+                                       <div class="select">
+                                          <select>
+                                             <option value="Is Not">Is Not</option>
+                                             <option value="txt">Is Empty</option>
+                                             <option value="epub">Empty</option>
+                                             <option value="fb2">Starts With</option>
+                                             <option value="mobi">Starts End</option>
+                                          </select>
+                                       </div>
+                                       <input type="text" id="empty-input">
+                                    </div> <!-- input-4 -->
+               
+                                    <div class="main">
+                                       <div class="main-one">
+                                          <input type="checkbox" class="checkbox" checked> &nbsp;
+                                          <p>Bill#</p>
+                                       </div>
+                                    </div>
+                                    <div class="input-5">
+                                       <div class="select">
+                                          <select>
+                                             <option value="Is Not">Is Not</option>
+                                             <option value="txt">Is Empty</option>
+                                             <option value="epub">Empty</option>
+                                             <option value="fb2">Starts With</option>
+                                             <option value="mobi">Starts End</option>
+                                          </select>
+                                       </div>
+                                       <input type="text" id="empty-input">
+                                    </div> <!-- input-5 -->
+               
+                                    <div class="main">
+                                       <div class="main-one">
+                                          <input type="checkbox" class="checkbox" checked> &nbsp;
+                                          <p>Status</p>
+                                       </div>
+                                    </div>
+                                    <div class="input-6">
+                                       <div class="select">
+                                          <select>
+                                             <option value="Is Not">Is Not</option>
+                                             <option value="txt">Is Empty</option>
+                                             <option value="epub">Empty</option>
+                                             <option value="fb2">Starts With</option>
+                                             <option value="mobi">Starts End</option>
+                                          </select>
+                                       </div>
+                                       <input type="text" id="empty-input">
+                                    </div> <!-- input-6 -->
+               
+                                    <div class="search-popup-btn"
+                                       style="margin-top: 50px;display: flex;justify-content: center;margin-bottom: 30px;width: 100%;">
+                                       <button
+                                          style="background-color: #020202;color: white;border-radius: 2.2px;outline: none;width: 17%;height: 38px;font-weight: 650;font-size: 12px;">Search</button>
+                                    </div>
+               
+                                 </div>
+                              </div> <!-- search-popup -->
+                           </div>
+               
+                           <div style="overflow-y:auto;height: 87vh;flex:10;width: 100%;margin-top: -18px;margin-bottom: 0;padding: 0;"
+                              class="tables">
+                              <table class="table-1">
+                                 <thead>
+                                    <tr>
+                                       <th><input type="checkbox" /> DATE</th>
+                                       <th>#INVOICE</th>
+                                       <th>ORDER NUMBER</th>
+                                       <th>CUSTOMER NAME</th>
+                                       <th>STATUS</th>
+                                       <th>DUE DATE</th>
+                                       <th>AMOUNT</th>
+                                       <th>BALANCE DUE</th>
+               
+                                    </tr>
+                                 </thead><br />
+                                 <tbody>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #FE745C;font-size: 15px;font-family: 'Dongle', sans-serif;font-weight: 600;">
+                                          DUE TODAY</td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #FE745C;font-size: 15px;font-family: 'Dongle', sans-serif;font-weight: 600;">
+                                          DUE TODAY</td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #FE745C;font-size: 15px;font-family: 'Dongle', sans-serif;font-weight: 600;">
+                                          DUE TODAY</td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #FE745C;font-size: 15px;font-family: 'Dongle', sans-serif;font-weight: 600;">
+                                          DUE TODAY</td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #FE745C;font-size: 15px;font-family: 'Dongle', sans-serif;font-weight: 600;">
+                                          DUE TODAY</td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #FE745C;font-size: 15px;font-family: 'Dongle', sans-serif;font-weight: 600;">
+                                          DUE TODAY</td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #FE745C;font-size: 15px;font-family: 'Dongle', sans-serif;font-weight: 600;">
+                                          DUE TODAY</td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                    <tr>
+                                       <td> <input type="checkbox"> 16 Dec 2022</td>
+                                       <td>SNTH-2022-00086</td>
+                                       <td>1900000008</td>
+                                       <td>Christopher Jonathan</td>
+                                       <td style="color: #2485E8;font-weight: 600;font-size: 15px;font-family: 'Dongle', sans-serif;">
+                                          <i class="fa-regular fa-envelope" style="color: BLACK;"></i> DUE TODAY
+                                       </td>
+                                       <td>16 Dec 2022</td>
+                                       <td>$30.09</td>
+                                       <td>$5.09</td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div> <!-- tables -->
+                        </div> <!-- content-body -->
+               
+                        <div class="page-count-container"
+                           style="width: 100%;padding: 0;margin: 0;display: flex;flex-wrap: wrap;align-items: center;align-content: center;">
+                           <div class="content"
+                              style="display: flex;justify-content: flex-start;width: 84%;align-content: center;align-items: center;">
+                              <div class="one" style="margin-left: 30px;align-items: center;">
+                                 <p style="font-family: 'Overpass', sans-serif;font-weight: 600;font-size: 17.8px;">Total Count : 300
+                                    <i class="fa-solid fa-bars-progress"></i>
+                                 </p>
+                              </div>
+               
+                              <div class="two" style="margin-left: auto;display: flex;">
+                                 <ul
+                                    style="display: flex;list-style: none;padding: 0;align-items: center;margin: 0;align-items: center;justify-content: space-between;flex-wrap: wrap;">
+                                    <li>
+                                       <div class="select">
+                                          <select>
+                                             <option value="Is Not">25 Per Page</option>
+                                             <option value="txt">100 Per PAge</option>
+                                             <option value="epub">200 Per Page</option>
+                                          </select>
+                                    </li> &nbsp;&nbsp;
+               
+                                    <li>
+                                       <span><i class="fa-solid fa-grip-lines-vertical"></i></span>
+                                    </li>
+                                    <li>
+                                       <span><i class="fa-solid fa-angles-left"></i></span>
+                                    </li>
+                                    <li>
+                                       <span><i class="fa-sharp fa-solid fa-circle-chevron-left"></i></span>
+                                    </li>
+                                    <li>
+                                       <span style="font-family: 'Overpass', sans-serif;font-size: 15.5px;"> 1 - 40 </span>
+                                    </li>
+                                    <li>
+                                       <span><i class="fa-sharp fa-solid fa-circle-chevron-right"></i></span>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div> <!-- content -->
+                     </div> <!-- page-count-container -->
+                </div>
+
                 <div class="container-fluid card-section">
                     <div class="row mt-3" id="homeContent">
                         <div class="col card1">
-                            <div class="card-body" id="box1">
+                            <div class="card-body">
                                 <h6>Product Solid</h6>
                                 <p>45678</p>
                                 <p>jan-march 2019</p>
@@ -146,9 +737,14 @@
                     </div>
                 </div>
 
+
                 
-                    <div class="container-fluid card-section " id="all_content">
-                        <div class="row mt-3">
+                
+
+
+                        <!-- Appsync -->
+                    <div class="container-fluid card-section d-none" id="all_content">
+                        <div class="row">
                             <div class="col">
                                 <div class="card-body1">
                                     <div class="card-header p-2">Loyverse for Zoho Books</div>
@@ -232,16 +828,9 @@
     
                     </div>
 
-                
-
-            </article>
-
-
-
-
+                </article>
         </main>
 
-        <!-- <footer>footer</footer> -->
     </div>
 
 
@@ -249,6 +838,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="micro.js"></script>
+
+    
    
     
 </body>
