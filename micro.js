@@ -15,78 +15,72 @@ function toggleNav() {
         bodyDiv.style.marginLeft = "200px";
     }
 }
-
-
-// background color function
-
-function openNav() {
-    document.body.style.backgroundColor = "rgb(80,81,249);";
-}
-
-function openNav(contentId) {
-    var contentSections = document.querySelectorAll(".content-section");
-    contentSections.forEach(function (section) {
-        section.style.display = "none";
+// side panel bacgroundcolor
+function highlightItem(itemId) {
+    var items = document.querySelectorAll('.nav-item');
+    items.forEach(function(item) {
+        if (item.id === itemId) {
+            item.style.backgroundColor = "rgb(80, 81, 249)";
+            item.style.borderRadius = "5px";
+            item.style.margin = "5px"
+        } else {
+            item.style.backgroundColor = ""; // Remove background color
+            item.style.borderRadius = "";
+            item.style.margin = "";
+        }
     });
-    document.getElementById(contentId).style.display = "block";
-    var sidepanel = document.getElementById("mySidepanel");
-    var bodyDiv = document.getElementById("body-div");
-    sidepanel.style.width = "200px";
-    bodyDiv.style.marginLeft = "200px";
 }
-
-//  for sidepanel dropdown
-// function openNav(contentId) {
-//     var contentSections = document.querySelectorAll(".content-section");
-//     contentSections.forEach(function (section) {
-//         section.style.display = "none";
-//     });
-//     document.getElementById(contentId).style.display = "block";
-//     var sidepanel = document.getElementById("mySidepanel");
-//     var bodyDiv = document.getElementById("body-div");
-//     sidepanel.style.width = "200px";
-//     bodyDiv.style.marginLeft = "200px";
-// }
 
 
 // Dropdown function
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+function toggleDropdown() {
+    var checkbox = document.getElementById("toggleCheckbox");
+    var dropdown = document.getElementById("myDropdown");
+    var button = document.querySelector(".dropbtn");
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+    if (checkbox.checked) {
+        dropdown.classList.remove("d-none");
+        button.classList.add("show");
+    } else {
+        dropdown.classList.add("d-none");
+        button.classList.remove("show");
     }
-  }
 }
 
+//   function toggleDropdown() {
+//     var dropdown = document.getElementById("myDropdown");
+//     dropdown.classList.toggle("show");
+// }
 
-// function toggleNav() {
-//     var sidepanel = document.getElementById("mySidepanel");
-//     var bodyDiv = document.getElementById("body-div");
-//     var buttonIcon = document.querySelector("#button i.fa-solid");
-
-//     if (sidepanel.classList.contains("open")) {
-//         sidepanel.classList.remove("open");
-//         bodyDiv.classList.remove("open");
-//         buttonIcon.classList.remove("fa-angles-right");
-//         buttonIcon.classList.add("fa-angles-left");
-//     } else {
-//         sidepanel.classList.add("open");
-//         bodyDiv.classList.add("open");
-//         buttonIcon.classList.remove("fa-angles-left");
-//         buttonIcon.classList.add("fa-angles-right");
+// window.onclick = function(event) {
+//     var dropdown = document.getElementById("myDropdown");
+//     if (!event.target.matches('.dropbtn') && !event.target.matches('#toggleCheckbox')) {
+//         dropdown.classList.remove('show');
 //     }
 // }
 
+function toggleDropdown() {
+    var checkbox = document.getElementById("toggleCheckbox");
+    var dropdown = document.getElementById("myDropdown");
+    var button = document.querySelector(".dropbtn");
+
+    if (checkbox.checked) {
+        dropdown.classList.add("show");
+        button.style.display = "block";
+    } else {
+        dropdown.classList.remove("show");
+        button.style.display = "none";
+    }
+}
+
+window.onclick = function(event) {
+    var dropdown = document.getElementById("myDropdown");
+    if (!event.target.matches('.dropbtn')) {
+        dropdown.classList.remove('d-none');
+    }
+}
+
+  
 // button left and right toggle 
 
 function toggleNav() {
@@ -106,6 +100,11 @@ function toggleNav() {
         buttonIcon.classList.add("fa-angles-left");
     }
 }
+
+// expand button after click the auditlog
+
+
+
 
 // audit log
 $(document).ready(function() {
@@ -128,3 +127,20 @@ $(document).ready(function() {
          $("#audit").addClass("d-none"); // Show the all extension content
     });
 });
+
+
+// Search Icon
+
+const searchIcon = document.querySelector(".search-icon");
+const closeSearchIcon  = document.querySelector(".close-search-icon");
+
+searchIcon.addEventListener("click", (e) => {
+   document.querySelector(".popup").style.flex = "3.5";
+   document.querySelector(".popup").style.display = "block";
+   document.querySelector(".page-count-container").style.width = "63.35%";
+})
+
+closeSearchIcon.addEventListener("click", (e) => {
+   document.querySelector(".popup").style.display = "none";
+   document.querySelector(".page-count-container").style.width = "100%";
+})
