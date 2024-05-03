@@ -10,7 +10,7 @@ html,body{
 header{
     background-color: rgb(28,28,64);
 }
-span{
+span.logo{
     background-color: rgb(80,81,249);
 }
 .fa-bell {
@@ -59,19 +59,24 @@ aside ul li:hover{
     background-color: rgb(44,42,80);
 }
 
-aside ul li:active{
+/* aside ul li:active{
     background-color: rgb(80,81,249);
-}
-aside button{
+} */
+/* aside ul li#audit_log:active,
+aside ul li#audit_log:focus,
+aside ul li#audit_log:hover {
+    background-color: rgb(80, 81, 249);
+} */
+aside #button{
     display: flex;
-    align-items: end;
-    margin-left: 24px;
+    justify-content: center;
+   
 }
-aside button .fa-angles-left{
+/* aside #button .fa-angles-left{
     background-color: rgb(24,26,46);
     border: none;
-    /* color: white; */
-}
+     color: white;
+} */
 .sidepanel {
     width: 0;
     position: fixed;
@@ -103,7 +108,9 @@ aside button .fa-angles-left{
 .dropbtn {
   background-color: rgb(30,31,67);
   color: white;
-  padding: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  width: 280px;
   font-size: 15px;
   border: none;
   cursor: pointer;
@@ -118,7 +125,7 @@ aside button .fa-angles-left{
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 280px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -132,6 +139,8 @@ aside button .fa-angles-left{
 }
 
 .dropdown a:hover {background-color: rgb(30,31,67);}
+
+.show {display: block;}
 article{
     display: flex;
     flex-direction: row;
@@ -510,6 +519,70 @@ main .content-2 .right-side .body .image img{
    height: 55vh;
 }
 
+/* Bottom Page Counter Container */
+
+.page-count-container{
+   position: fixed;
+   background-color: #FFFFFF;
+   top: 94.6%;
+   z-index: 100;
+   width: 100%;
+   height: 5vh;
+}
+
+.page-count-container ul  li{
+   padding-right: 20px;
+}
+
+.page-count-container ul li i{
+   font-size: 16px;
+   color: #bebdbd;
+   cursor: pointer;
+}
+
+.content-1 .page-count-container .select{
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   padding: 0;
+   margin-left: 45px;
+   position: relative;
+   height: 2.2em;
+   line-height: 2.2;
+   border-radius: 2px;
+   /* border: 1.9px solid #dedfdf; */
+   color: #858486;
+}
+
+.content-1 .page-count-container .select:focus{
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   padding: 0;
+   margin-bottom: 14px;
+   margin-left: 25px;
+   position: relative;
+   height: 2.2em;
+   line-height: 2.2;
+   border: 1.9px solid red;
+   color: #858486;
+}
+
+.content-1 .page-count-container .select::after {
+   display: flex;
+   justify-content: center;
+   content: '\25BC';
+   position: absolute;
+   width: 10px;
+   top: 0;
+   right: 0;
+   padding: 0 1em;
+   background: #e6e6e6;
+   cursor:pointer;
+   pointer-events:none;
+   transition:.25s all ease;
+   border-left: 2px solid #E1DFE1;
+}
 #body-div {
     position: relative;
     overflow: hidden;
@@ -558,15 +631,22 @@ main .content-2 .right-side .body .image img{
    
 }
 
-/* All Extension */
-.card-body1 {
-    height: 170px;
+/* APPSYNC */
+.card {
+    height: 150px;
     background-color: rgb(255, 255, 255);
-    border-radius: 5px;
-
+    /* border-radius: 5px; */
+    border: 1px solid grey;
+    margin-bottom: 20px;
+    /* width: 100%; */
 }
 
-.card-body1 .card-header {
+.card .card-header {
     background-color: rgb(237, 237, 255);
     font-weight: bold;
+    /* border: 1px solid grey; */
 }
+/* .card .img1{
+   margin-right: 90px;
+
+} */
